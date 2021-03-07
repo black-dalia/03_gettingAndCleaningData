@@ -2,7 +2,7 @@
 peer graded assignment for week 4 of module 03 Getting and Cleaning the Data
 
 This project contains:
-- the script to run: peer-graded.R fully commented (read warning before running)
+- the script to run: peer-graded.R fully commented (read warning before running). No need to have the files from Samsung downloaded already, this script will download them in the temporary working directory.
 - the tidy table output from the script (this table will also be created by the script in the temporary directory, see comments in scripts): peer_graded_tidyTable.txt
 - the codebook (pdf file): codebook.pdf
 - the markdown script for the codebook: codebook.Rmd 
