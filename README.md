@@ -13,8 +13,8 @@ This project contains:
 How to run this project? 
 - download peer-graded.R in a directory and run (Source)
 - a directory will be created containing all downloaded files and table output. You should remove it manually afterwards. 
-- read the codebook
-The other files are here to show ho I created the codebook. 
+- read the codebook\
+The other files are here to show how I created the codebook. 
 
 I wish you a smooth run, and thank you for grading me! 
 
