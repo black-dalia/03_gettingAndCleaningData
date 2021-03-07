@@ -1,0 +1,47 @@
+---
+title: "Codebook for peer-graded assignment week 4 of module 03 Getting and Cleaning the Data"
+author: "me!"
+date: "3/7/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Warning
+
+Before running the script peer-graded.R, be aware that this script will: \
+- install packages dplyr and stringr in the default directory if there are not installed yet\
+- clean all your variables in the global environment at the beginning of the script\
+- clean all intermediate variables at the end of the script\newline
+- a temporary directory will be created in your current working directory, called DELETEME_612. The working directory will be then set to this DELETEME_612, and set back to your current directory at the end of the script.\
+- If there is already a directory called DELETEME_612 in your working directory, there will be an error message. This will be the case if you are trying to rerun the script. Please remove the directory called DELETEME_612 before rerunning.  \
+
+## About the experiment 
+The experiments have been carried out with a group of **30 volunteers** within an age bracket of 19-48 years. Each person performed **six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)** wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. \
+
+## Results \
+### Elements in Global Environment\
+After running the script, you will be left with 5 elements in your environment:\
+- **Q1_mergedf**: the data frame that answers Q1 after merging test and train dataset\
+- **Q2_selectdf**: after selecting column containing either mean or standard deviation\
+- **Q3_selectdf_label**: with descriptive activity names\
+- **Q4_selectdf_label**: with optimized naming\
+- **Q5_mean_by_gr**: a tidy dataset containing the mean by group for each column of Q4 dataset. This table is saved into a file in the temporary eorking directory, called _peer_graded_tidyTable.txt_ (see comments in the script _peer_graded.R_ for information about location)\
+
+
+### About the final table
+The last table Q5_mean_by_gr is a tidy table containing 180 observations of 81 variables. 
+Variables are mean or standard deviation of movement indicators. They have been averaged for each "group", a group being a unique combination of person and activity type. 
+A full description of the variables is provided in the table below. A link showing distribution and missing values (if any) are stored in:\
+- distribution.html
+- figures
+
+
+
+````{r , echo= FALSE}
+library(knitr)
+load("data.Rdata")
+kable(Variables)
+````
